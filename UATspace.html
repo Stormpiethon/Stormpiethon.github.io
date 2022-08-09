@@ -1,0 +1,133 @@
+<!Doctype html>
+<html>
+<!--HTML for UAT Space in CSC102
+    By Alexander Brittain 
+ALEBRITT@uat.edu-->
+
+<head>
+    <!--links up code .js with our html file-->
+    <script src="code.js"></script>
+    <script src="classCode.js"></script>
+    <script src="launchDataDis.js"></script>
+    <!--Raw data for the DOM-->
+    <script src="dataLoader.js"></script>
+    <!--Stylesheet link-->
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <!--Title at top bar for webpage-->
+    <title>
+        Alexander's Space Out program
+    </title>
+    <script>
+       //Create some needed variables for the DOM
+       var theTime = new Date();
+       var time_interval = 5000;
+       var last_iteration = 0;
+       var running = true;
+       var index = 0;
+       var timer;
+       var data = getData();
+    </script>
+
+</head>
+
+<body>      <!--Table of Blastoff Data-->
+    <table>
+            <td><img src="UATspaceLogo-2 (1).jpg"></td>
+            <td><h1>UAT Space Program</h1></td>
+    </table>
+    <br>        <!--Table measurements-->
+    <table id="data" width="70%" border="2">
+        <col width = "35%"><col width = "35%">
+        <thead>
+            <th>Data Type</th>
+            <th>Reading</th>
+        </thead>
+        <tbody>
+            <tr id="seconds"></tr>
+            <tr id="latitude"></tr>
+            <tr id="longitude"></tr>
+            <tr id="gpsAltitude"></tr>
+            <tr id="bmpSensorAlt"></tr>
+            <tr id="bmpSensorPress"></tr>
+            <tr id="bmpSensorTemp"></tr>
+            <tr id="digiSensorTemp"></tr>
+            <tr id="cssSensorTemp"></tr>
+            <tr id="cssSensoreCO2"></tr>
+            <tr id="cssSensorTVOC"></tr>
+            <tr id="UV"></tr>
+            <tr id="accelX"></tr>
+            <tr id="accelY"></tr>
+            <tr id="accelZ"></tr>
+            <tr id="magX"></tr>
+            <tr id="magY"></tr>
+            <tr id="magZ"></tr>
+            <tr id="gyroX"></tr>
+            <tr id="gyroY"></tr>
+            <tr id="gyroZ"></tr>
+        </tbody>
+    </table>
+    <br>
+    <br>
+    The current time is: <div id="timeDisplay">Press start for time</div>
+    <br>
+    <br><!--start and stop button-->
+    <button onclick="start();" id="startButton" class = "button">start</button>
+    <button onclick="stop();" id="stopButton" class = "button" style="margin:10px;">stop</button>
+    <br>
+    <br>
+    <br>
+    <!--Buttons for Playing Audio Files-->
+    <button onclick="playStation();"class = "button2">Play Space Station Sounds</button><br>
+    <br>
+    <button onclick="playStation();"class = "button2">Play Selected Music</button><br>
+    <br>
+    <br>
+    <!-- Die1 result display-->
+    die1 result: <div id="die1res">result here when started</div><br>
+    <!-- Die2 result display-->
+    die2 result: <div id="die2res">result here when started</div><br>
+    <!-- Game result display-->
+    Game result: <div id="gameres">result here when started</div><br>
+    <br>
+    <!-- Button for playing craps-->
+    <button onclick="play_craps();"class = "button3">play craps</button>
+    <br>
+    <br>
+    <button onclick="playTilWin();"class = "button3">play until win</button>
+    <br>
+    <br>
+    Wins<br>
+    <br>
+    <!--space for displaying win results-->
+    <div id="winRes"></div>
+    Losses<br>
+    <!--space for displaying loss results-->
+    <div id="loseRes"></div>
+    <br>
+    Ties<br>
+    <!--space for displaying tie results-->
+    <div id="tieRes"></div>
+    <script>
+        var ast001 = new Astronaut("Nancy", "Drew", 14, "F", "1.5")
+    </script>
+    <br>
+    <br>
+    <button onclick="ast001.displayChar();">Display Astro</button> <br>
+    <form id="creditSubmit" onsubmit="return false">
+        Astronaut ID: <input type="text" id=""><br>
+        <input type="submit" onclick="checkCreds()">
+    
+    </form>
+    <script>
+        var fallData = new Mission("To boldly go...", 13, "Nov", 2023, "Fiona", 135, 3);
+        var springData = new Mission("To go again...", 24, "Apr", 2024, "Fred", 35, 2);
+    </script>
+    <br>
+    <br>
+    <br>
+    <button onclick="fallLaunch()" class = "button3">Fall Launch</button>
+    <br>
+    <button onclick="springData.displayMissionParam()" class = "button3">Spring Launch</button>
+</body>
+
+</html>
