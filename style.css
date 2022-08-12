@@ -27,16 +27,16 @@ body{
     border-radius: 13px;
 }
 
-#textTitle{
-    text-align: center;
-}
-
 nav{
     line-height: 30px;
     height: 200px;
     width: 125px;
     padding: 5px;
     float: left;
+}
+
+header{
+    text-align: center;
 }
 
 #picTitle{
