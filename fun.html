@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <link href="style.css" rel="stylesheet" type="text/css" />
+    <script src="funCode.js"></script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fun Page</title>
 </head>
+
 <body>
     <header>
         <h1>
@@ -26,6 +29,11 @@
     <br>
     <br>
     <!--Insert fun here-->
+    <form id="factTable" onsubmit="return false">
+        Please enter a whole number > 1<input type="number" id="factInput"><br>
+        <div style="margin-left: 355px;"><input type="submit" onclick="factDet()"></div><br>
+    </form>
+    <div id="factTable">Factorial Value is: <div id="answer">Enter a starting value</div></div>
     <br>
     <br>
     <footer>
@@ -35,4 +43,5 @@
         <a href="mailto:alebritt@uat.edu">alebritt@uat.edu</a>
     </footer>
 </body>
+
 </html>
