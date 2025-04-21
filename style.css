@@ -69,3 +69,29 @@ footer {
 .contact a {
     color: yellow;
 }
+
+.sip-images {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.sip-image {
+    width: 500px;
+    height: auto;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 300px;
+    margin-right: 10px;
+}
+
+.second-logo {
+    height: 50px;
+}
